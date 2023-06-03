@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticação de Usuários</title>
+</head>
+<body>
+        <h3>Criação de Conta</h3>
+
+        <form action="/signin" method="post">
+        {% csrf_token %}
+            <label for="">Nome de Usuario</label>
+            <input type="text" id="username" name="username" placeholder="Digite o seu nome de usuário" required>
+            <br>
+
+            <label for="">Senha</label>
+            <input type="password" id="pass1" name="pass1" placeholder="Digite a sua senha" required>
+            
+            <button type="submit">Entrar na Conta</button>
+
+        </form>    
+        
+
+
+</body>
+</html>
