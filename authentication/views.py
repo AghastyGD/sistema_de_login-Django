@@ -52,7 +52,7 @@ def signup(request):
         # Email de boas vindas
         
         subject = "Seja bem vindo ao meu Sistema de Login!"
-        message = "Olá " + myuser.first_name + "!! \n" + "Seja bem vindo ao meu Sistema de Login \n Muito Obrigado por visitar o meu site \n Por favor, cheque o seu email, acabei de enviar um link de confirmação para ativar a sua conta. \n\n Meus Cumprimentos,\n Augusto Domingos"
+        message = "Olá " + myuser.first_name + "!! \n" + "Seja bem vindo ao meu Sistema de Login\n\n Muito Obrigado por visitar o meu site\n\n Por favor, cheque o seu email, acabei de enviar um link de confirmação para ativar a sua conta. \n\n Meus Cumprimentos,\n Augusto Domingos"
         from_email = settings.EMAIL_HOST_USER
         to_list = [myuser.email]
         send_mail(subject, message, from_email, to_list, fail_silently=True)
