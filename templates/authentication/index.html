@@ -7,11 +7,26 @@
     <title>Autenticação de Usuários</title>
 </head>
 <body>
+
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
         <h3>Seja Bem Vindo ao Meu Sistema de Login</h3>
 
+        {% if user.is_authenticated %}
+        <h3>Olá {{ fname }}</h3>
+        <h4>Entrou com sucesso em sua conta!</h4>
+        <button type="submit"><a href="/signout"> SignOut </a></button>
+        {% else %}
         <button type="submit"><a href="/signup"> SignUp </a></button>
         <button type="submit"><a href="/signin"> SignIn </a></button>
-        <button type="submit"><a href="/signout"> SignOut </a></button>
+        {% endif %}
 
 
 </body>
