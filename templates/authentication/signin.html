@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,24 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autenticação de Usuários</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
-        <h3>Fazer Login</h3>
-
+    <main class="container">
+        <h2>Fazer Login</h2>
         <form action="/signin" method="post">
-        {% csrf_token %}
-            <label for="">Nome de Usuario</label>
-            <input type="text" id="username" name="username" placeholder="Digite o seu nome de usuário" required>
-            <br>
-
-            <label for="">Senha</label>
-            <input type="password" id="pass1" name="pass1" placeholder="Digite a sua senha" required>
-            
-            <button type="submit">Entrar na Conta</button>
-
-        </form>    
-        
-
-
+            {% csrf_token %}
+            <div class="input-field">
+                <label for="username">Nome de Usuário</label>
+                <input type="text" id="username" name="username" placeholder="Digite o seu nome de usuário" required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <label for="pass1">Senha</label>
+                <input type="password" id="pass1" name="pass1" placeholder="Digite a sua senha" required>
+                <div class="underline"></div>
+            </div>
+            <input type="submit" value="Entrar na Conta">
+        </form>
+    </main>
 </body>
 </html>

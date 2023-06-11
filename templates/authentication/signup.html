@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,52 +7,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autenticação de Usuários</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
-<body>  
-
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-        <strong>Message:</strong> {{ message }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    {% endfor %}
-
-
-        <h3>Criação de Conta</h3>
-
+<body>
+    <main class="container">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Message:</strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endfor %}
+        <h2>Criação de Conta</h2>
         <form action="/signup" method="post">
-        {% csrf_token %}
-            <label for="">Nome de Usuario</label>
-            <input type="text" id="username" name="username" placeholder="Crie um nome de usuário (apenas letras e números)" required>
-            <br>
-
-            <label for="">Primeiro Nome</label>
-            <input type="text" id="fname" name="fname" placeholder="Digite o seu primeiro nome" required>
-            <br>
-
-            <label for="">Último Nome</label>
-            <input type="text" id="lname" name="lname" placeholder="Digite o seu Apelido" required>
-            <br>
-
-            <label for="">Endereço de Email</label>
-            <input type="email" id="email" name="email" placeholder="Digite o seu Endereço de Email" required>
-            <br>
-
-            <label for="">Senha</label>
-            <input type="password" id="pass1" name="pass1" placeholder="Crie uma senha forte" required>
-            <br>
-
-            <label for="">Confirme a sua Senha</label>
-            <input type="password" id="pass2" name=pass2 placeholder="Confirme a sua senha" required>
-            <br>
-            
-            <button type="submit">Criar Conta</button>
-
-        </form>    
-        
-
-
+            {% csrf_token %}
+            <div class="input-field">
+                <label for="username">Nome de Usuário</label>
+                <input type="text" id="username" name="username" placeholder="Crie um nome de usuário (apenas letras e números)" required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <label for="fname">Primeiro Nome</label>
+                <input type="text" id="fname" name="fname" placeholder="Digite o seu primeiro nome" required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <label for="lname">Último Nome</label>
+                <input type="text" id="lname" name="lname" placeholder="Digite o seu Apelido" required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <label for="email">Endereço de Email</label>
+                <input type="email" id="email" name="email" placeholder="Digite o seu Endereço de Email" required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <label for="pass1">Senha</label>
+                <input type="password" id="pass1" name="pass1" placeholder="Crie uma senha forte" required>
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <label for="pass2">Confirme a sua Senha</label>
+                <input type="password" id="pass2" name="pass2" placeholder="Confirme a sua senha" required>
+                <div class="underline"></div>
+            </div>
+            <input type="submit" value="Criar Conta">
+        </form>
+    </main>
 </body>
 </html>
