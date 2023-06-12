@@ -1,152 +1,174 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #ff4f4f, #ff0000);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.button {
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 12px 36px;
+    margin-top: 20px;
+}
+
+.container {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+}
+
+.container h2 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.container input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  width: 100%; /* Define a largura das caixas de input como 100% */
+  box-sizing: border-box; /* Inclui o preenchimento e a borda na largura total */
+}
+
+
+.container input[type="submit"] {
+  background-color: #4a00e0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #777777;
+}
+
+
+
+
+.container input[type="submit"] {
+  background-color: #4a00e0;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container a.button {
+  background-color: #8e2de2;
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 12px 36px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 12px;
+  border-radius: 6px;
+  border: 2px solid crimson;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.container a.button:hover{
+  color: crimson
+  background: none
   
-  body {
-    background: linear-gradient(45deg, #8e2de2, #4a00e0);
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Poppins", sans-serif;
-  }
-  
+}
+
+
+.container p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #777777;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.footer span {
+  color: #777777;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.footer .social-field {
+  padding: 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.footer .social-field a i {
+  margin: 0 0.5rem;
+  width: 15px;
+}
+
+.footer .social-field a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer .social-field.twitter {
+  background: linear-gradient(to right, #56a7f2, #468aca);
+}
+
+.footer .social-field.facebook {
+  background: linear-gradient(to right, #1e3c72, #2a5289);
+}
+
+.footer .social-field.github {
+  background: linear-gradient(to right, #2b2b2b, #000000);
+}
+
+@media (max-width: 480px) {
   .container {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-    width: 300px;
-    min-height: 40vh;
-    padding: 2rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  .container h2 {
-    font-weight: 600;
-    margin-bottom: 2rem;
-    position: relative;
-  }
-  
-  .container h2::before {
-    content: "";
-    position: absolute;
-    height: 4px;
-    width: 25px;
-    bottom: 1px;
-    left: 0;
-    border-radius: 8px;
-    background: linear-gradient(45deg, #8e2de2, #4a00e0);
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input-field {
-    position: relative;
-  }
-  
-  .input-field:first-child {
-    margin-bottom: 1.5rem;
-  }
-  
-  .input-field .underline::before {
-    content: "";
-    position: absolute;
-    height: 1px;
     width: 100%;
-    bottom: -5px;
-    left: 0;
-    background: rgba(0, 0, 0, 0.2);
   }
-  
-  .input-field .underline::after {
-    content: "";
-    position: absolute;
-    height: 1px;
-    width: 100%;
-    bottom: -5px;
-    left: 0;
-    background: linear-gradient(45deg, #8e2de2, #4a00e0);
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-    transform-origin: left;
-  }
-  
-  .input-field input:focus ~ .underline::after {
-    transform: scaleX(1);
-  }
-  
-  .input-field input {
-    outline: none;
-    font-size: 0.9rem;
-    color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .input-field input::placeholder {
-    color: rgba(0, 0, 0, 0.5);
-  }
-  
-  form input[type="submit"] {
-    margin-top: 2rem;
-    padding: 0.4rem;
-    background: linear-gradient(to left, #4776e6, #8e54e9);
-    cursor: pointer;
-    color: white;
-    font-size: 0.9rem;
-    font-weight: 300;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-  }
-  
-  form input[type="submit"]:hover {
-    letter-spacing: 0.5px;
-    background: linear-gradient(to right, #4776e6, #8e54e9);
-  }
-  
-  .footer {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
-  }
-  
-  .footer span {
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 0.8rem;
-    text-align: center;
-  }
-  
-  .footer .social-field {
-    padding: 0.4rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    width: 100%;
-    cursor: pointer;
-    margin-top: 1rem;
-  }
-  
-  .footer .social-field a i {
-    margin: 0 0.5rem;
-    width: 15px;
-  }
-  
-  .footer .social-field a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .footer .social-field.twitter {
-    background: linear-gradient(to right, #56a7f2, #468aca);
-  }
-  
-  .footer .social-field.facebook {
-    background: linear-gradient(to right, #1e3c72, #2a5289);
-  }
-  
-  .footer .social-field.github {
-    background: linear-gradient(to right, black, black);
-  }
-  
+}
