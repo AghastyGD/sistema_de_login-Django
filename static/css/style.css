@@ -5,7 +5,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #ff4f4f, #ff0000);
+  background: linear-gradient(to bottom, #ff4f4f, #ff7300c5);
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
@@ -87,10 +87,15 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   padding: 0.5rem;
-  border: none;
+  border: 2px solid #4a00e0;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.container input[type="submit"]:hover{
+  color: #4a00e0;
+  background: none;
 }
 
 .container a.button {
@@ -104,15 +109,15 @@ body {
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 12px;
-  border-radius: 6px;
+  border-radius: 10px;
   border: 2px solid crimson;
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .container a.button:hover{
-  color: crimson
-  background: none
+  color: crimson;
+  background: none;
   
 }
 
